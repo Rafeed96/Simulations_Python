@@ -25,3 +25,10 @@ hit_y = []
 
 miss_x = []
 miss_y = []
+
+
+for i in range(n):
+    D = np.random.uniform(low=0.0, high = 0.5)
+    theta = np.random.uniform(low=0.0, high=np.pi)
+
+    

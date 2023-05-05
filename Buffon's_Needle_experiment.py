@@ -28,7 +28,7 @@ miss_y = []
 
 
 for i in range(n):
-    D = np.random.uniform(low=0.0, high = 0.5)
+    D = np.random.uniform(low=0.0, high=0.5)
     theta = np.random.uniform(low=0.0, high=np.pi)
 
     # Hit condition
@@ -40,4 +40,8 @@ for i in range(n):
         miss_x.append(theta)
         miss_y.append(D)
 
-estimated_pi = (2*n)
+estimated_pi = (2*n)/hit
+print(estimated_pi)
+
+plt.scatter(hit_x, hit_y, c="red")
+plt.scatter(miss_x, miss_y, c="green")

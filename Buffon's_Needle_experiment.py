@@ -10,3 +10,18 @@
 # D <= (l/2)sin0
 
 # pi = (2*n)/hits
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+np.random.seed(0)
+
+n = 1000000
+hit = 0
+
+hit_x = []
+hit_y = []
+
+miss_x = []
+miss_y = []

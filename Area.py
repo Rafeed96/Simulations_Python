@@ -18,3 +18,18 @@ hit_Y = []
 
 miss_X = []
 miss_Y = []
+
+
+for i in range(n):
+    x = np.random.uniform(low=x_min, high=x_max)
+    y = np.random.uniform(low=y_min, high=y_max)
+
+    if x <= 1:
+        # Triangle Check
+        if y <= x:
+            hit = hit + 1
+            hit_X.append(x)
+            hit_Y.append(y)
+        else:
+            miss_X.append(x)
+            miss_Y.append(y)

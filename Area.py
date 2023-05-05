@@ -33,3 +33,21 @@ for i in range(n):
         else:
             miss_X.append(x)
             miss_Y.append(y)
+
+    else:
+        # Circle Check
+        if (x-1)**2 + y**2 <= 1:
+            hit = hit + 1
+            hit_X.append(x)
+            hit_Y.append(y)
+        else:
+            miss_X.append(x)
+            miss_Y.append(y)
+
+
+area = hit*2/n
+
+print(area)
+
+plt.scatter(hit_X, hit_Y, c="red")
+plt.scatter(miss_X, miss_Y, c="green")

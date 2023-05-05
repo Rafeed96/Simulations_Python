@@ -31,4 +31,13 @@ for i in range(n):
     D = np.random.uniform(low=0.0, high = 0.5)
     theta = np.random.uniform(low=0.0, high=np.pi)
 
-    
+    # Hit condition
+    if D <= 0.5*np.sin(theta):
+        hit = hit + 1
+        hit_x.append(theta)
+        hit_y.append(D)
+    else:
+        miss_x.append(theta)
+        miss_y.append(D)
+
+estimated_pi = (2*n)

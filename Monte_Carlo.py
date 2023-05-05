@@ -26,3 +26,13 @@ for i in range(n):
     f_sum = f_sum + y
 
     f_sq_sum = f_sq_sum + y**2
+
+
+f_bar = f_sum/n
+f_sq_bar = f_sq_sum/n
+area = f_bar*(b-a)
+
+error = ((b-a)/n**0.5)*(f_sq_bar - f_bar**2)**0.5
+
+print(area)
+print(error)

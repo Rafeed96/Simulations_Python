@@ -56,3 +56,18 @@ for i in range(n):
 
 
 
+
+
+  if y <=1 and x<=3 :
+    # Circle Check
+    if (x-1)**2 + (y)**2 <=1:
+      hit = hit + 1
+      hit_X.append(x+1)
+      hit_Y.append(y+1)
+    else:
+      if x<=2:
+        miss_X.append(x+1)
+        miss_Y.append(y+1)
+      else:
+        miss_X.append(x-2)
+        miss_Y.append(y+1)

@@ -1,5 +1,5 @@
 import math
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 T_x = []
 T_y = []
@@ -17,3 +17,12 @@ print(T_y)
 
 plt.scatter(T_x, T_y)
 plt.plot(T_x, T_y)
+
+
+S = 10
+
+P_x = [100]
+P_y = [100]
+
+for t in range(20):
+    dist = math.sqrt((T_x[t]-P_x[t])**2 + (T_y[t]-P_y[t])**2)

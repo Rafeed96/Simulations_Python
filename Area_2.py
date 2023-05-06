@@ -18,3 +18,41 @@ hit_Y = []
 
 miss_X = []
 miss_Y = []
+
+
+
+
+for i in range(n):
+  x = np.random.uniform(low=x_min, high=x_max)
+  y = np.random.uniform(low=y_min, high=y_max)
+
+  if x <=1 and y<=1 :
+    #Paralellogram
+    # Triangle Check
+    if y<=x:
+      hit = hit + 1
+      hit_X.append(x)
+      hit_Y.append(y)
+    else:
+      miss_X.append(x)
+      miss_Y.append(y)
+  elif x>1 and x<=2  and y<=1:
+    # Square Check
+      if y<=1:
+        hit = hit + 1
+        hit_X.append(x)
+        hit_Y.append(y)
+      else:
+       miss_X.append(x)
+       miss_Y.append(y)
+  elif x>=2 and x<=3 and y<=1:
+    if y>=(x-2) and y<=1:
+        hit = hit + 1
+        hit_X.append(x)
+        hit_Y.append(y)
+    else:
+       miss_X.append(x)
+       miss_Y.append(y)
+
+
+

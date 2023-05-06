@@ -45,3 +45,5 @@ print(estimated_pi)
 
 plt.scatter(hit_x, hit_y, c="red")
 plt.scatter(miss_x, miss_y, c="green")
+
+plt.show()

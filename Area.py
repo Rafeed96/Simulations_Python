@@ -51,3 +51,5 @@ print(area)
 
 plt.scatter(hit_X, hit_Y, c="red")
 plt.scatter(miss_X, miss_Y, c="green")
+
+plt.show()

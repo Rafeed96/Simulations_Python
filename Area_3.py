@@ -67,3 +67,13 @@ for i in range(n):
             else:
                 miss_X.append(x-2)
                 miss_Y.append(y+1)
+
+
+area1 = (hit*(x_max*y_max))/n
+
+print(area1)
+
+plt.scatter(hit_X, hit_Y, c="red")
+plt.scatter(miss_X, miss_Y, c="green")
+
+plt.show()

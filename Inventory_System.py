@@ -85,3 +85,11 @@ for cycle in range(10):
 
 for i in range(50):
     days.append(i+1)
+
+
+print("Average ending inventory: ", (avg_ending/50))
+print("Number of shortage days: ", shortage_day_count)
+print("")
+plt.plot(days, end_Graph)
+
+plt.show()

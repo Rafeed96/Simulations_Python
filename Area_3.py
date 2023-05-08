@@ -1,18 +1,22 @@
 
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
 
-np.random.seed(1)
+# domain and range for random number
+X_min = -2
+Y_min = -2
 
-x_min = 0
-y_min = 0
+X_max = 3
+Y_max = 4
 
-x_max = 3
-y_max = 2
+# Random generation
+# higher number makes plot look better but question says 1000
 
-n = 1000000
+n = 100000
 
 hit = 0
+
+# Storing hits and miss for plot
 
 hit_X = []
 hit_Y = []
@@ -20,58 +24,24 @@ hit_Y = []
 miss_X = []
 miss_Y = []
 
+# Code to simulate 
 
 for i in range(n):
-    x = np.random.uniform(low=x_min, high=x_max)
-    y = np.random.uniform(low=y_min, high=y_max)
+  #create random num from within x and y max,min
+  x = np.random.uniform(low=X_min, high=X_max)
+  y = np.random.uniform(low=Y_min, high=Y_max)
 
-    if x <= 1 and y <= 1:
-        # Paralellogram
-        # Triangle Check
-        if y <= x:
-            hit = hit + 1
-            hit_X.append(x)
-            hit_Y.append(y)
-        else:
-            miss_X.append(x)
-            miss_Y.append(y)
+  # check if within circle or not
+  # radius = 2
+  if x**2 + y**2 <= 2**2:
+    hit = hit + 1
+    hit_X.append(x)
+    hit_Y.append(y)
+  else:
+    miss_X.append(x)
+    miss_Y.append(y)
 
-    elif x > 1 and x <= 2 and y <= 1:
-        # Square Check
-        if y <= 1:
-            hit = hit + 1
-            hit_X.append(x)
-            hit_Y.append(y)
-        else:
-            miss_X.append(x)
-            miss_Y.append(y)
-    elif x >= 2 and x <= 3 and y <= 1:
-        if y >= (x-2) and y <= 1:
-            hit = hit + 1
-            hit_X.append(x)
-            hit_Y.append(y)
-        else:
-            miss_X.append(x)
-            miss_Y.append(y)
-
-    if y <= 1 and x <= 3:
-        # Circle Check
-        if (x-1)**2 + (y)**2 <= 1:
-            hit = hit + 1
-            hit_X.append(x+1)
-            hit_Y.append(y+1)
-        else:
-            if x <= 2:
-                miss_X.append(x+1)
-                miss_Y.append(y+1)
-            else:
-                miss_X.append(x-2)
-                miss_Y.append(y+1)
-
-
-area1 = (hit*(x_max*y_max))/n
-
-print(area1)
+# Plot witinh circle as red and outer as green
 
 plt.scatter(hit_X, hit_Y, c="red")
 plt.scatter(miss_X, miss_Y, c="green")

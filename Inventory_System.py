@@ -30,3 +30,31 @@ for cycle in range(10):
         if days_until_arrival < 0:
             beginning_inventory = beginning_inventory + order_quantity
             order_quantity = 0
+
+
+        daily_demand = np.random.choice(a=[0,1,2,3,4,5], p=[0.10, 0.15, 0.25, 0.25, 0.15, 0.10]) # edit according to the spec
+ 
+        # update total_demand using daily demand
+        total_demand = daily_demand + shortage_quantity
+
+
+
+        if total_demand > beginning_inventory:
+            # shortage occurs
+            # Update -> shortage_quantity, ending_inventory
+            shortage_quantity = total_demand - beginning_inventory 
+            ending_inventory = 0
+            end_Graph.append(ending_inventory)
+            avg_ending = avg_ending + ending_inventory
+            shortage_day_count = shortage_day_count + 1
+            temp = beginning_inventory 
+        else :
+            shortage_quantity = 0
+            ending_inventory = beginning_inventory - total_demand
+            avg_ending = avg_ending + ending_inventory
+            end_Graph.append(ending_inventory)
+            print("")
+            # No shortage
+            # Update -> shortage_quantity, ending_inventory
+
+

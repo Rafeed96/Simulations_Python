@@ -15,3 +15,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 np.random.seed(1)
+
+
+
+n = 1000
+hit = 0
+
+hit_x = []
+hit_y = []
+
+miss_x = []
+miss_y = []

@@ -17,7 +17,6 @@ import numpy as np
 np.random.seed(1)
 
 
-
 n = 1000
 hit = 0
 
@@ -26,3 +25,17 @@ hit_y = []
 
 miss_x = []
 miss_y = []
+
+
+for i in range(n):
+    D = np.random.uniform(low=0.0, high=3.6)
+    theta = np.random.uniform(low=0.0, high=np.pi)
+
+    # Hit Condition
+    if D <= 3.6*np.sin(theta):
+        hit = hit + 1
+        hit_x.append(theta)
+        hit_y.append(D)
+    else:
+        miss_x.append(theta)
+        miss_y.append(D)

@@ -62,3 +62,16 @@ for cycle in range(10):
         print("")
         print("")
         beginning_inventory = ending_inventory
+
+        # Code for review day
+        # beginning_inventory = beginning_inventory - total_demand
+        if (day == N):
+            # calculate order_quantity using M, ending_inventory, shortage_quantity
+            order_quantity = (M - ending_inventory) + shortage_quantity
+            # sample days_until_arrival value (similar to daily_demand sampling)
+
+            days_until_arrival = np.random.choice(
+                a=[1, 2, 3, 4], p=[0.50, 0.35, 0.10, 0.05])  # edit according to the spec
+
+            if days_until_arrival > 2:
+                order_quantity = order_quantity + 3

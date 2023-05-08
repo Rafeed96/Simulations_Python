@@ -75,3 +75,13 @@ for cycle in range(10):
 
             if days_until_arrival > 2:
                 order_quantity = order_quantity + 3
+
+
+# Print final reports
+# Average ending inventory
+# number of shortage days
+# Graph (ending inventory vs days)
+
+
+for i in range(50):
+    days.append(i+1)

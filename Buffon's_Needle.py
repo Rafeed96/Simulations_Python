@@ -17,7 +17,7 @@ import numpy as np
 np.random.seed(1)
 
 
-n = 1000
+n = 10000
 hit = 0
 
 hit_x = []
@@ -44,3 +44,10 @@ for i in range(n):
 estimated_pi = (2*n)/hit
 area = (2**2)*estimated_pi
 print(estimated_pi)
+
+
+plt.scatter(hit_x, hit_y, c="red")
+plt.scatter(miss_x, miss_y, c="green")
+
+
+plt.show()

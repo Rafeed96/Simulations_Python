@@ -39,3 +39,8 @@ for i in range(n):
     else:
         miss_x.append(theta)
         miss_y.append(D)
+
+
+estimated_pi = (2*n)/hit
+area = (2**2)*estimated_pi
+print(estimated_pi)

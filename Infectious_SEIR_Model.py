@@ -45,3 +45,16 @@ s = x[:, 0]
 e = x[:, 1]
 i = x[:, 2]
 r = x[:, 3]
+
+
+# plot the data
+plt.figure(figsize=(8, 5))
+
+plt.subplot(2, 1, 1)
+plt.title('Social Distancing = '+str(u*100)+'%')
+plt.plot(t, s, color='blue', lw=3, label='Susceptible')
+plt.plot(t, r, color='red', lw=3, label='Recovered')
+plt.ylabel('Fraction')
+plt.legend()
+
+plt.show()

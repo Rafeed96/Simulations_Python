@@ -71,3 +71,14 @@ for i in range(1,572):
     susceptible.append(S)
     infected.append(I)
     recovered.append(R)
+
+
+
+plt.plot(susceptible,color = 'blue',label = 'Susceptible')
+plt.plot(infected,color = 'orange',label = 'Infected')
+plt.plot(recovered,color = 'green',label = 'Recovered')
+plt.title('SIR Model')
+plt.legend()
+plt.xlabel('Day')
+plt.ylabel('Population')
+plt.show()

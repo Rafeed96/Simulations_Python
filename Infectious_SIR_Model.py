@@ -42,3 +42,15 @@ plt.legend()
 plt.xlabel("Time")
 plt.ylabel("Proportion")
 plt.show()
+
+
+
+url = 'https://raw.githubusercontent.com/AbuSiam007/Covid-19-Model/main/Datasets/All%20Status%20of%20Covid-19%20in%20Bd.csv'
+       
+df = pd.read_csv(url)
+
+
+Ntested = df.Newly_tested
+Ncases = df.New_cases
+Ndeaths = df.New_deaths
+Nrecovered = df.Newly_recovered

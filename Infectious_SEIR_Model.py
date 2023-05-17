@@ -58,3 +58,14 @@ plt.ylabel('Fraction')
 plt.legend()
 
 plt.show()
+
+
+plt.subplot(2, 1, 1)
+plt.plot(t, i, color='orange', lw=3, label='Infected')
+plt.plot(t, e, color='purple', lw=3, label='Exposed')
+plt.ylim(0, 0.2)
+plt.xlabel('Time (days)')
+plt.ylabel('Fraction')
+plt.legend()
+
+plt.show()

@@ -29,3 +29,16 @@ t = numpy.linspace(0, 100, 10000)
 solution = scipy.integrate.odeint(
     SIR_model, [S0, I0, R0], t, args=(beta, gamma))
 solution = numpy.array(solution)
+
+
+
+#plot
+plt.figure(figsize=[6, 4])
+plt.plot(t, solution[:, 0], label="S(t)")
+plt.plot(t, solution[:, 1], label="I(t)")
+plt.plot(t, solution[:, 2], label="R(t)")
+
+plt.legend()
+plt.xlabel("Time")
+plt.ylabel("Proportion")
+plt.show()

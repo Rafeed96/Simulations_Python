@@ -54,3 +54,12 @@ Ntested = df.Newly_tested
 Ncases = df.New_cases
 Ndeaths = df.New_deaths
 Nrecovered = df.Newly_recovered
+
+
+
+susceptible = []
+susceptible.append(S) 
+infected = []
+infected.append(I)
+recovered = []
+recovered.append(R)

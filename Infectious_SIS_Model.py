@@ -1,3 +1,5 @@
+# Succeptible Infected Succeptible ==> SIS Model
+
 import matplotlib.pylab as plt
 
 N = 10000  # Total population
@@ -19,3 +21,16 @@ def funcSIS(S, I, N, T):
 
         susceptible.append(S)
         infected.append(I)
+
+
+
+funcSIS(S, I, N , T)
+
+
+plt.plot(susceptible,color = 'darkblue',label = 'Susceptible')
+plt.plot(infected,color = 'red',label = 'infected')
+plt.title('SIS Model')
+plt.legend()
+plt.xlabel('Day')
+plt.ylabel('Population')
+plt.show()

@@ -63,3 +63,11 @@ infected = []
 infected.append(I)
 recovered = []
 recovered.append(R)
+
+
+for i in range(1,572):
+    S,I,R = S - Ncases[i] , I + Ncases[i] - Nrecovered[i], R + Nrecovered[i]
+
+    susceptible.append(S)
+    infected.append(I)
+    recovered.append(R)

@@ -44,7 +44,7 @@ def main():
     run = True
     clock = pygame.time.Clock()
 
-    sun = Planet(0, 0, YELLOW, 1.98892 * 10**30)
+    sun = Planet(0, 0, 30, YELLOW, 1.98892 * 10**30)
     sun.sun = True
 
     planets = [sun]

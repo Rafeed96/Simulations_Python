@@ -12,6 +12,7 @@ pygame.display.set_caption("Planet Simulation")
 
 BLACK = (0, 0, 0)
 YELLOW = (255, 255, 0)
+BLUE = (100, 149 , 237)
 
 
 class Planet:
@@ -47,7 +48,9 @@ def main():
     sun = Planet(0, 0, 30, YELLOW, 1.98892 * 10**30)
     sun.sun = True
 
-    planets = [sun]
+    earth = Planet(-1 * Planet.AU, 0, 16, BLUE, 5.9742 * 10**24)
+
+    planets = [sun, earth]
 
     while run:
         clock.tick(60)

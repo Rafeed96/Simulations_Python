@@ -57,7 +57,7 @@ class Planet:
         force_x = math.cos(theta) * force
         force_y = math.sin(theta) * force
         return force_x, force_y
-    
+
     def update_position(self, planets):
         total_fx = total_fy = 0
         for planet in planets:
@@ -68,10 +68,11 @@ class Planet:
             total_fx += fx
             total_fy += fy
         self.x_vel = total_fx / self.mass * self.TIMESTEP
+        self.y_vel = total_fy / self.mass * self.TIMESTEP
 
-        F = m / a
-        a = f / m
-        
+        self.x += self.x_vel * self.TIMESTEP
+        self.y += self.y_vel * self.TIMESTEP
+        self.orbit.append((self.x, self.y))
 
 
 def main():
@@ -82,7 +83,7 @@ def main():
     sun.sun = True
 
     earth = Planet(-1 * Planet.AU, 0, 16, BLUE, 5.9742 * 10**24)
-
+    
     mars = Planet(-1.524 * Planet.AU, 0, 12, RED, 6.39 * 10**23)
 
     mercury = Planet(0.387 * Planet.AU, 0, 8, DARK_GREY, 3.30 * 10**23)
@@ -92,7 +93,7 @@ def main():
     planets = [sun, earth, mars, mercury, venus]
 
     while run:
-        clock.tick(60)
+        clock.tick( 0)
 
         WIN.fill(BLACK)
 
@@ -101,6 +102,7 @@ def main():
                 run = False
 
         for planet in planets:
+            planet.update_position(planets)
             planet.draw(WIN)
 
         pygame.display.update()

@@ -122,3 +122,31 @@ jupiter_spot.setheading(180)
 saturn.setheading(225)
 uranus.setheading(270)
 neptune.setheading(315)
+
+wn.tracer(10)
+
+
+def orbits():
+    mercury.fd(5)
+    mercury.lt(2.4)
+    venus.fd(5)
+    venus.lt(1.8)
+    earth.fd(5)
+    earth.lt(1.4)
+    moon.goto(earth.xcor(), earth.ycor())
+    moon.fd(35)
+    moon.rt(5)
+    mars.fd(5)
+    mars.lt(1.1)
+    jupiter.fd(5)
+    jupiter.lt(0.9)
+    jupiter_spot.fd(5)
+    jupiter_spot.lt(0.9)
+    saturn.fd(5)
+    saturn.lt(0.76)
+    uranus.fd(5)
+    uranus.lt(0.67)
+    neptune.fd(5)
+    neptune.lt(0.61)
+
+    

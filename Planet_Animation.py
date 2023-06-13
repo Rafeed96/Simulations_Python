@@ -103,3 +103,14 @@ uranus.pu()
 uranus.goto(-150, 0)
 uranus.pensize(5)
 uranus.pd()
+
+neptune = turtle.Turtle()
+neptune.shape('circle')
+neptune.shapesize(stretch_len=2.3, stretch_wid=2.3)
+neptune.color('blue')
+neptune.pu()
+neptune.goto(-50, -325)
+neptune.pensize(5)
+neptune.pd()
+
+

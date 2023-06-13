@@ -149,4 +149,31 @@ def orbits():
     neptune.fd(5)
     neptune.lt(0.61)
 
+
+def show_planets():
+    mercury_x = str(mercury.xcor())
+    mercury_y = str(mercury.ycor())
+    venus_x = str(venus.xcor())
+    venus_y = str(venus.ycor())
+    earth_x = str(earth.xcor())
+    earth_y = str(earth.ycor())
+    moon_x = str(moon.xcor())
+    moon_y = str(moon.ycor())
+    mars_x = str(mars.xcor())
+    mars_y = str(mars.ycor())
+    jupiter_x = str(jupiter.xcor())
+    jupiter_y = str(jupiter.ycor())
+    saturn_x = str(saturn.xcor())
+    saturn_y = str(saturn.ycor())
+    uranus_x = str(uranus.xcor())
+    uranus_y = str(uranus.ycor())
+    neptune_x = str(neptune.xcor())
+    neptune_y = str(neptune.ycor())
+
+    pen.goto(-850, 450)
+    pen.color("yellow")
+    pen.goto(-850, 450)
+    pen.color("yellow")
+    pen.goto(-850, 450)
+    pen.color("yellow")
     

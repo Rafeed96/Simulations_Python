@@ -3,7 +3,7 @@ import time
 
 wn = turtle.Screen()
 wn.title("Solar System")
-wn.bgpic("E:\Projects\Repositories\Python\Simulations_Python\Images\Black_Sky.jpg")
+wn.bgpic("E:\Projects\Repositories\Python\Simulations_Python\Images\Black.png")
 wn.setup(width=1750, height=1000)
 
 pen = turtle.Turtle()
@@ -150,7 +150,7 @@ def orbits():
     neptune.lt(0.61)
 
 
-def show_planets():
+def Game():
     mercury_x = str(mercury.xcor())
     mercury_y = str(mercury.ycor())
     venus_x = str(venus.xcor())
@@ -172,8 +172,34 @@ def show_planets():
 
     pen.goto(-850, 450)
     pen.color("yellow")
-    pen.goto(-850, 450)
-    pen.color("yellow")
-    pen.goto(-850, 450)
-    pen.color("yellow")
-    
+    pen.goto(-700, 450)
+    pen.color("dark red")
+    pen.goto(-850, 350)
+    pen.color("dark gray")
+    pen.goto(-850, 250)
+    pen.color("white")
+    pen.goto(-850, 150)
+    pen.color("turquoise")
+    pen.goto(-850, 50)
+    pen.color("light gray")
+    pen.goto(-850, -50)
+    pen.color("#FF0000")
+    pen.goto(-850, -150)
+    pen.color("#8B4513")
+    pen.goto(-850, -250)
+    pen.color("light yellow")
+    pen.goto(-850, -350)
+    pen.color("light blue")
+    pen.goto(-850, -450)
+    pen.color("blue")
+
+
+while True:
+    orbits()
+    Game()
+    saturn_ring.clear()
+    saturn_ring.goto(saturn.xcor()-1, saturn.ycor()-45)
+    saturn_ring.circle(42)
+    wn.update()
+
+wn.mainloop()

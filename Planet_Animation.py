@@ -113,4 +113,12 @@ neptune.goto(-50, -325)
 neptune.pensize(5)
 neptune.pd()
 
-
+mercury.setheading(0)
+venus.setheading(45)
+earth.setheading(90)
+mars.setheading(135)
+jupiter.setheading(180)
+jupiter_spot.setheading(180)
+saturn.setheading(225)
+uranus.setheading(270)
+neptune.setheading(315)

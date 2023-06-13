@@ -3,7 +3,7 @@ import time
 
 wn = turtle.Screen()
 wn.title("Solar System")
-wn.bgpic("https://images.unsplash.com/photo-1544656376-ffe19d4b7353?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBza3l8ZW58MHx8MHx8fDA%3D&w=1000&q=80")
+wn.bgpic("E:\Projects\Repositories\Python\Simulations_Python\Images\Black_Sky.jpg")
 wn.setup(width=1750, height=1000)
 
 pen = turtle.Turtle()
